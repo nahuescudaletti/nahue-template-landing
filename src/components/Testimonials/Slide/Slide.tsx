@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { dataTestimonials } from '../Testimonials.data'
 import { Reveal } from '@/components/Reveal'
 import { Keyboard, Mousewheel, Navigation, Pagination } from 'swiper/modules'
+import { getBasePath } from '@/utils/utils'
 
 export function Slide() {
     return (
@@ -29,7 +30,7 @@ export function Slide() {
             {dataTestimonials.map(({ id, name, work, testimonial, image }) => (
                 <SwiperSlide key={id} className="my-5 cursor-pointer md:px-10">
                     <Reveal>
-                        <Image src="/assets/testimonial-icon.png" alt="Testimonial" width={50} height={50} className="w-auto h-auto" />
+                        <Image src={`${getBasePath()}/assets/testimonial-icon.png`} alt="Testimonial" width={50} height={50} className="w-auto h-auto" />
                         <div className="my-5">
                             {testimonial}
                         </div>

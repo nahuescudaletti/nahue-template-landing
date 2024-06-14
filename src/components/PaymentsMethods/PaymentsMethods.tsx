@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { dataPaymentMethods } from './PaymentMethods.data'
 import Image from 'next/image'
 import { CtaDark } from '../CtaDark'
+import { getBasePath } from '@/utils/utils'
 
 export function PaymentsMethods() {
     return (
@@ -29,7 +30,7 @@ export function PaymentsMethods() {
                     <div className="absolute flex">
                         {dataPaymentMethods.map(({ id, image }) => (
                             <SwiperSlide key={id} className="flex items-center slider-horizontal">
-                                <Image src={`/assets/${image}`} alt="Payment" width="70" height="70" className="h-[60px] w-[120px] object-contain" />
+                                <Image src={`${getBasePath()}/assets/${image}`} alt="Payment" width="70" height="70" className="h-[60px] w-[120px] object-contain" />
                             </SwiperSlide>
                         ))}
                     </div>
