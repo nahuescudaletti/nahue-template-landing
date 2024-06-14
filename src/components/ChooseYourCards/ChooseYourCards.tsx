@@ -21,6 +21,7 @@ export function ChooseYourCards() {
                 </Reveal>
                 <div className="px-5">
                     <MotionTransition>
+                        <span className="block degradedBlue bg-OrangeLight">Selecciona tu tarjeta arrastrando el mouse</span>
                         <Swiper
                             effect={"cards"}
                             grabCursor={true}
