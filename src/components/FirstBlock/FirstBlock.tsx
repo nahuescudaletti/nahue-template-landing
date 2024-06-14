@@ -32,7 +32,7 @@ export function FirstBlock() {
                     </Reveal>
                 </div>
                 <MotionTransition className="flex items-center justify-center">
-                    <Image src="/assets/tazas.png" alt="Card" width={450} height={450} className="h-auto w-72 md:w-full" />
+                    <Image src="/nahue-template-landing/assets/tazas.png" alt="Card" width={450} height={450} className="h-auto w-72 md:w-full" />
                 </MotionTransition>
             </div>
         </div>
