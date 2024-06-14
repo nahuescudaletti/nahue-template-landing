@@ -4,11 +4,10 @@ import { BackgroundRadialRight } from "../BackgroundRadialRight"
 import { MotionTransition } from "../MotionTransition"
 import Image from "next/image"
 import { Reveal } from "../Reveal"
-import { getBasePath } from '../../utils/utils'import { useRouter } from "next/router"
+import { getBasePath } from '../../utils/utils'
 
 
 export function FirstBlock() {
-      const { basePath } = useRouter();
     return (
         <div className="relative p-4 md:py-40">
             <BackgroundRadialRight />
@@ -34,7 +33,7 @@ export function FirstBlock() {
                     </Reveal>
                 </div>
                 <MotionTransition className="flex items-center justify-center">
-                    <Image src="/nahue-template-landing/assets/tazas.png" alt="Card" width={450} height={450} className="h-auto w-72 md:w-full" />
+                    <Image src={`${getBasePath()}/assets/tazas.png`} alt="Card" width={450} height={450} className="h-auto w-72 md:w-full" />
                 </MotionTransition>
             </div>
         </div>
