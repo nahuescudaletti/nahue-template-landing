@@ -5,7 +5,7 @@ import { Montserrat} from 'next/font/google'
 const popinsFont = Montserrat({ weight: ['400', '600', '700'], subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'proedge-landing',
+  title: 'nahue-template-landing',
   description: 'Follow me for more!',
 }
 
