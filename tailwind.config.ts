@@ -31,6 +31,14 @@ const config: Config = {
       boxShadow: {
         dark: "0px 20px 100px -10px rgba(66, 71, 91, 0.1)",
       },
+      fontFamily: {
+        'sans': ['Montserrat', 'sans-serif'],
+        'serif': ['Montserrat', 'serif'],
+        'mono': ['Montserrat', 'monospace'],
+        'light': ['Montserrat-Light', 'sans-serif'],
+        'thin': ['Montserrat-Thin', 'sans-serif'],
+        'extralight': ['Montserrat-ExtraLight', 'sans-serif'],
+      },
     },
   },
   plugins: [],

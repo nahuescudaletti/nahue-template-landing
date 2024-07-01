@@ -9,34 +9,7 @@ import { getBasePath } from '@/utils/utils'
 
 export function PaymentsMethods() {
     return (
-        <div className="relative py-20 md:py-40" id="servicios">
-            <BackgroundRadialRight />
-            <div className="relative w-full overflow-hidden">
-                <Swiper
-                    breakpoints={{
-                        320: {
-                            slidesPerView: 8,
-                            spaceBetween: 15
-                        }
-                    }}
-                    autoplay={{
-                        delay: 1,
-                        disableOnInteraction: false
-                    }}
-                    grabCursor={true}
-                    loop={true}
-                    speed={2000}
-                >
-                    <div className="absolute flex">
-                        {dataPaymentMethods.map(({ id, image }) => (
-                            <SwiperSlide key={id} className="flex items-center slider-horizontal">
-                                <Image src={`${getBasePath()}/assets/${image}`} alt="Payment" width="70" height="70" className="h-[60px] w-[120px] object-contain" />
-                            </SwiperSlide>
-                        ))}
-                    </div>
-                </Swiper>
-            </div>
-
+        <div className="relative py-20 md:py-40" id="newsletter">
             <CtaDark />
         </div>
     )

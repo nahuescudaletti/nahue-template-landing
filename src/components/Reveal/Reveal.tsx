@@ -1,24 +1,23 @@
-"use client"
-import { useAnimation, useInView, motion } from "framer-motion"
-import { useEffect, useRef } from "react"
+"use client";
+import { useAnimation, useInView, motion } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 export function Reveal({ children }: { children: React.ReactNode }) {
-
-    const ref = useRef(null)
-    const isInView = useInView(ref, { once: false })
-    const mainControls = useAnimation()
-    const slideControls = useAnimation()
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: false });
+    const mainControls = useAnimation();
+    const slideControls = useAnimation();
 
     useEffect(() => {
         if (isInView) {
-            mainControls.start("visible")
-            slideControls.start("visible")
+            mainControls.start("visible");
+            slideControls.start("visible");
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isInView])
+    }, [isInView]);
 
     return (
-        <div ref={ref} className="relative overflow-hidden w-fit rounded-lg"> {/* Añadir bordes redondeados */}
+        <div ref={ref} className="relative overflow-hidden w-fit rounded-lg">
             <motion.div
                 variants={{
                     hidden: { opacity: 0, y: 75 },
@@ -45,12 +44,12 @@ export function Reveal({ children }: { children: React.ReactNode }) {
                     bottom: 4,
                     left: 0,
                     right: 0,
-                    background: "#6de4e8",
+                    background: "rgba(109, 228, 232, 0.5)", // Color de fondo con transparencia
                     zIndex: 20,
-                    borderRadius: "inherit" // Hacer que el borde redondeado se herede del contenedor
+                    borderRadius: "inherit"
                 }}
             >
             </motion.div>
         </div>
-    )
+    );
 }
