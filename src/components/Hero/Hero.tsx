@@ -12,7 +12,7 @@ export function Hero() {
                         <h3 className="text-center text-base md:text-xl lg:text-4xl font-light font-montserrat">We don’t do average, we do awesome</h3>
                         <Image
                             src={`${getBasePath()}/assets/PE_logo_white_1_.svg`} // Replace with your image path
-                            alt="PROEDGE" // Provide an appropriate alt text
+                            alt="example" // Provide an appropriate alt text
                             width={600} // Set the desired width
                             height={400} // Set the desired height
                         />
